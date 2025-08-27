@@ -1,18 +1,18 @@
 import React from "react";
 const Header = () => {
   return (
-    <header>
+    <div className="header">
       <div className="logo">
-        <img src="logo.png" alt="Food Fire Logo" />
-        <span>Food Fire</span>
+        <img src="logocart.jpg"  />
       </div>
       <div className="nav-links">
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
-        <a href="/login">Login</a>
+       <ul>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About us</li>
+       </ul>
       </div>
-    </header>
+    </div>
   );
 };
 export default Header;
