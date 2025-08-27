@@ -1,26 +1,33 @@
-header {
-  height: 70px;          /* set fixed height */
-  width: 100%;           /* full width */
+#root {
+  margin: 0;
+  padding: 0;
+  
+}
+body {
+  margin: 0;
+  display: block; /* reset */
+  min-width: auto;
+  min-height: auto;
+}
+
+
+
+
+.header {
   display: flex;
-  align-items: center;   /* center items vertically */
-  justify-content: space-between; /* space between logo and links */
-  padding: 0 2rem;
-  background: #f5f5f5;
-  box-sizing: border-box;
+  border: 2px solid;
+  justify-content: space-between;
+  
+}
+.logo > img {
+  
+  width: 120px;
+}
+.nav-links > ul {
+  display: flex;
+  list-style: none;
 }
 
-header img {
-  height: 50px;          /* set logo size */
-  width: auto;           /* keep aspect ratio */
-}
-
-header a {
-  margin-left: 1rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-}
-
-header a:hover {
-  color: #007bff;
+.nav-links > ul > li {
+  padding: 10px;
 }
