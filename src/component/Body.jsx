@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 const Body = () => {
+   
+
+  return (
    <div className="conatiner">
     <div className="resturent-card">
       <img src=""/>
@@ -9,5 +12,6 @@ const Body = () => {
 
     </div>
    </div>
+  )
 }
 export default Body
