@@ -1,13 +1,8 @@
-#root {
+html, body, #root {
   margin: 0;
   padding: 0;
-  
-}
-body {
-  margin: 0;
-  display: block; /* reset */
-  min-width: auto;
-  min-height: auto;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -17,6 +12,8 @@ body {
   display: flex;
   border: 2px solid;
   justify-content: space-between;
+  width: 100%;
+   box-sizing: border-box;
   
 }
 .logo > img {
