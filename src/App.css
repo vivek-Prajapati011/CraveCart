@@ -28,3 +28,77 @@ html, body, #root {
 .nav-links > ul > li {
   padding: 10px;
 }
+.resturent-card-container {
+  width: 250px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.resturent-card-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.res-img img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.res-part2 {
+  padding: 10px 12px;
+}
+
+.res-part2 h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 5px 0;
+  color: #333;
+}
+
+.res-part2 h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+
+.res-part3 {
+  padding: 0 12px 12px 12px;
+}
+
+.res-part3 h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin: 4px 0;
+}
+
+.res-part3 h3 {
+  font-size: 13px;
+  font-weight: 400;
+  color: #fc8019; /* Swiggy orange for offers */
+}
+
+.resturent-card-container button {
+  margin: 0 12px 12px 12px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #fc8019;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.resturent-card-container button:hover {
+  background: #e46e13;
+}
