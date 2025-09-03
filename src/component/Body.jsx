@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import data from "../data";
 import ResCard from "./ResCard";
+import Footer from "./Footer";
 const Body = () => {
   return (
     <div className="conatiner">
@@ -18,6 +19,10 @@ const Body = () => {
             />
           );
         })}
+      </div>
+      <div className="footer">
+        <Footer />
+
       </div>
     </div>
   );
