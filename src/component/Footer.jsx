@@ -44,8 +44,37 @@ const Footer = () => {
         </ul>
       </div>
       <div className="social-media-logo">
-        
-
+        <ul>
+          <li>
+            <a href="#">
+              <img src="https://www.svgrepo.com/show/503338/facebook.svg" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="https://commons.wikimedia.org/wiki/Special:Redirect/file/X_logo_2023.svg
+"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg
+"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg
+"
+              />
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   );
