@@ -52,35 +52,35 @@ html, body, #root {
   object-fit: cover;
 }
 
-.res-part2 {
+.res-info {
   padding: 10px 12px;
 }
 
-.res-part2 h2 {
+.res-info h2 {
   font-size: 18px;
   font-weight: 600;
   margin: 5px 0;
   color: #333;
 }
 
-.res-part2 h3 {
+.res-info h3 {
   font-size: 14px;
   font-weight: 400;
   color: #666;
 }
 
-.res-part3 {
+.res-details {
   padding: 0 12px 12px 12px;
 }
 
-.res-part3 h2 {
+.res-details h2 {
   font-size: 14px;
   font-weight: 500;
   color: #555;
   margin: 4px 0;
 }
 
-.res-part3 h3 {
+.res-details h3 {
   font-size: 13px;
   font-weight: 400;
   color: #fc8019; /* Swiggy orange for offers */
