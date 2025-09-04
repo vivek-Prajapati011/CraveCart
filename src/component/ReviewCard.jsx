@@ -1,5 +1,5 @@
 import React from "react";
-const reviews = [
+const review = [
   {
     id: 1,
     name: "Aarav Sharma",
