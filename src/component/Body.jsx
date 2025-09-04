@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import data from "../data";
 import ResCard from "./ResCard";
 import Footer from "./Footer";
+import ReviewCard from "./ReviewCard";
 const Body = () => {
   return (
     <div className="conatiner">
@@ -18,11 +19,14 @@ const Body = () => {
               price_for_two={items.price_for_two}
             />
           );
-        })}
+        })} 
+      </div>
+      <div className="review-card">
+        <ReviewCard />
+
       </div>
       <div className="footer">
         <Footer />
-
       </div>
     </div>
   );
