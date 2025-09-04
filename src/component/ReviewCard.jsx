@@ -49,7 +49,20 @@ const review = [
     avatar: "https://i.pravatar.cc/50?img=6",
   }
 ];
-const ReviewCard = () => {
+const ReviewCard = ({name, rating, comment, avatar}) => {
+    return (
+        <Div>
+            <div className="review-img">
+                <img src={avatar}/>
+            </div>
+            <div className="review-info">
+                <h2>{name}</h2>
+                <h2>{rating}</h2>
+                <h2>{comment}</h2>
+                <h2>{avatar}</h2>
+            </div>
+        </Div>
+    )
 
 }
 export default ReviewCard
