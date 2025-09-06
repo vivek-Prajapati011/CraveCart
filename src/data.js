@@ -21,6 +21,32 @@ export default [
 {"id":108,"name":"Chilli Chicken","price":260,"rating":4.4,"image":"https://source.unsplash.com/400x300/?chillichicken","description":"Spicy Indo-Chinese style chicken tossed with chillies.","bestseller":true},
 {"id":109,"name":"Gobi 65","price":180,"rating":4.0,"image":"https://source.unsplash.com/400x300/?gobi","description":"Crispy fried cauliflower with spicy seasoning.","bestseller":false},
 {"id":110,"name":"Masala Dosa","price":120,"rating":4.6,"image":"https://source.unsplash.com/400x300/?dosa","description":"Crispy dosa stuffed with potato masala, served with chutney and sambar.","bestseller":true}
+],
+"review":[
+  {
+    "id": 1,
+    "name": "Rajesh Kumar",
+    "rating": 5,
+    "comment": "Amazing North Indian food! The paneer butter masala was absolutely delicious and the service was excellent.",
+    "date": "2024-01-15",
+    "avatar": "https://i.pravatar.cc/50?img=7"
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "rating": 4,
+    "comment": "Great food quality and reasonable prices. The chicken biryani was flavorful and well-cooked.",
+    "date": "2024-01-12",
+    "avatar": "https://i.pravatar.cc/50?img=8"
+  },
+  {
+    "id": 3,
+    "name": "Amit Singh",
+    "rating": 4,
+    "comment": "Good restaurant with authentic taste. The tandoori chicken was perfectly cooked.",
+    "date": "2024-01-10",
+    "avatar": "https://i.pravatar.cc/50?img=9"
+  }
 ]
 
 },
@@ -44,6 +70,32 @@ export default [
 {"id":208,"name":"Prawn Biryani","price":420,"rating":4.4,"image":"https://source.unsplash.com/400x300/?prawn-biryani","description":"Seafood biryani cooked with prawns.","bestseller":false},
 {"id":209,"name":"Mushroom Biryani","price":230,"rating":4.2,"image":"https://source.unsplash.com/400x300/?mushroom-biryani","description":"Rich biryani cooked with mushrooms and spices.","bestseller":false},
 {"id":210,"name":"Special Family Biryani","price":950,"rating":4.9,"image":"https://source.unsplash.com/400x300/?family-biryani","description":"Large family pack biryani served with raita and salan.","bestseller":true}
+],
+"review":[
+  {
+    "id": 4,
+    "name": "Suresh Patel",
+    "rating": 5,
+    "comment": "Best biryani in town! The Hyderabadi dum biryani was absolutely amazing with perfect spices.",
+    "date": "2024-01-18",
+    "avatar": "https://i.pravatar.cc/50?img=10"
+  },
+  {
+    "id": 5,
+    "name": "Kavita Reddy",
+    "rating": 4,
+    "comment": "Excellent mutton biryani and great portion size. The family pack is perfect for gatherings.",
+    "date": "2024-01-16",
+    "avatar": "https://i.pravatar.cc/50?img=11"
+  },
+  {
+    "id": 6,
+    "name": "Vikram Joshi",
+    "rating": 4,
+    "comment": "Good quality biryani with authentic taste. The chicken fry biryani is my favorite.",
+    "date": "2024-01-14",
+    "avatar": "https://i.pravatar.cc/50?img=12"
+  }
 ]
 },
 {
@@ -66,6 +118,32 @@ export default [
 {"id":308,"name":"Iced Latte","price":150,"rating":4.3,"image":"https://source.unsplash.com/400x300/?iced-latte","description":"Cold espresso with milk over ice.","bestseller":true},
 {"id":309,"name":"Vanilla Frappe","price":160,"rating":4.5,"image":"https://source.unsplash.com/400x300/?vanillafrappe","description":"Blended coffee with vanilla flavor.","bestseller":true},
 {"id":310,"name":"Caramel Macchiato","price":170,"rating":4.6,"image":"https://source.unsplash.com/400x300/?caramelmacchiato","description":"Espresso with caramel drizzle.","bestseller":true}
+],
+"review":[
+  {
+    "id": 7,
+    "name": "Anita Desai",
+    "rating": 5,
+    "comment": "Perfect coffee shop! The cappuccino is amazing and the ambiance is very relaxing.",
+    "date": "2024-01-20",
+    "avatar": "https://i.pravatar.cc/50?img=13"
+  },
+  {
+    "id": 8,
+    "name": "Rohit Agarwal",
+    "rating": 4,
+    "comment": "Great coffee and desserts. The chocolate lava cake is to die for!",
+    "date": "2024-01-17",
+    "avatar": "https://i.pravatar.cc/50?img=14"
+  },
+  {
+    "id": 9,
+    "name": "Meera Iyer",
+    "rating": 4,
+    "comment": "Love the cold coffee here. Perfect place to work or catch up with friends.",
+    "date": "2024-01-15",
+    "avatar": "https://i.pravatar.cc/50?img=15"
+  }
 ]
 },
 {
