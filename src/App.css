@@ -3,6 +3,20 @@ html, body, #root {
   padding: 0;
   width: 100%;
   height: 100%;
+  background-color: #f8fafc;
+}
+
+.conatiner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.resturent-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
 }
 
 
@@ -161,4 +175,205 @@ html, body, #root {
 .social-media-logo ul li img:hover {
   transform: scale(1.2);
   filter: brightness(0) invert(0.6) sepia(1) hue-rotate(190deg) saturate(300%);
+}
+
+/* Review Section Styles */
+.review-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 40px 20px;
+  margin: 20px 0;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.review-card h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.review-card h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #fc8019, #ff6b35);
+  border-radius: 2px;
+}
+
+/* Review Card Item Styles */
+.review-card-item {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-card-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fc8019, #ff6b35, #f59e0b);
+}
+
+.review-card-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border-color: #fc8019;
+}
+
+.review-card-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.review-img {
+  flex-shrink: 0;
+}
+
+.review-img img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fc8019;
+  box-shadow: 0 2px 8px rgba(252, 128, 25, 0.3);
+}
+
+.review-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.review-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f59e0b;
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  padding: 4px 12px;
+  border-radius: 20px;
+  width: fit-content;
+  border: 1px solid #f59e0b;
+}
+
+.review-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+  margin: 8px 0;
+  font-style: italic;
+  position: relative;
+  padding-left: 20px;
+}
+
+.review-info p::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 2rem;
+  color: #fc8019;
+  font-weight: bold;
+}
+
+.review-info p::after {
+  content: '"';
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  font-size: 2rem;
+  color: #fc8019;
+  font-weight: bold;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 8px;
+  width: fit-content;
+  border: 1px solid #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review-card {
+    padding: 20px 15px;
+    margin: 15px 0;
+  }
+  
+  .review-card h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .review-card-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .review-img img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .review-info h3 {
+    justify-content: center;
+  }
+  
+  .rating {
+    align-self: center;
+  }
+  
+  .date {
+    align-self: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .review-card-item {
+    padding: 16px;
+  }
+  
+  .review-info p {
+    font-size: 0.9rem;
+    padding-left: 15px;
+  }
 }
