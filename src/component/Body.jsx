@@ -22,8 +22,17 @@ const Body = () => {
         })} 
       </div>
       <div className="review-card">
-        <ReviewCard />
-
+        <h2>Customer Reviews</h2>
+        {data[0].restaurants[0].review.map((review) => (
+          <ReviewCard
+            key={review.id}
+            name={review.name}
+            rating={review.rating}
+            comment={review.comment}
+            avatar={review.avatar}
+            date={review.date}
+          />
+        ))}
       </div>
       <div className="footer">
         <Footer />
