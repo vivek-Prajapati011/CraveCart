@@ -23,16 +23,24 @@ const Body = () => {
       </div>
       <div className="review-card">
         <h2>Customer Reviews</h2>
-        {data[0].restaurants[0].review.map((review) => (
-          <ReviewCard
-            key={review.id}
-            name={review.name}
-            rating={review.rating}
-            comment={review.comment}
-            avatar={review.avatar}
-            date={review.date}
-          />
-        ))}
+        {data[0].restaurants
+          .filter(restaurant => restaurant.review)
+          .flatMap(restaurant => 
+            restaurant.review.map(review => ({
+              ...review,
+              uniqueKey: `${restaurant.id}-${review.id}`
+            }))
+          )
+          .map((review) => (
+            <ReviewCard
+              key={review.uniqueKey}
+              name={review.name}
+              rating={review.rating}
+              comment={review.comment}
+              avatar={review.avatar}
+              date={review.date}
+            />
+          ))}
       </div>
       <div className="footer">
         <Footer />
