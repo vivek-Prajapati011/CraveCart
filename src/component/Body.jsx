@@ -3,6 +3,7 @@ import data from "../data";
 import ResCard from "./ResCard";
 import Footer from "./Footer";
 import ReviewCard from "./ReviewCard";
+import MenuCard from "./MenuCard";
 const Body = () => {
   return (
     <div className="conatiner">
@@ -41,6 +42,14 @@ const Body = () => {
               date={review.date}
             />
           ))}
+      </div>
+      <div className="menu-card-box">
+        {data[0].restaurants.menu.map( (item) => {
+          return (
+            <MenuCard />
+          )
+        })}
+
       </div>
       <div className="footer">
         <Footer />
