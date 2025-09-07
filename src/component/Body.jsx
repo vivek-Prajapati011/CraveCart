@@ -46,7 +46,14 @@ const Body = () => {
       <div className="menu-card-box">
         {data[0].restaurants.menu.map( (item) => {
           return (
-            <MenuCard />
+            <MenuCard
+              key={item.uniqueKey}
+              name={item.name}
+              rating={item.rating}
+              description={item.description}
+              image={item.image}
+              price={item.price}
+             />
           )
         })}
 
