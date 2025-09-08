@@ -20,7 +20,7 @@ const Body = () => {
               location={items.location}
               image={items.image}
               price_for_two={items.price_for_two}
-              
+              onOpenMenu={() => setSelectedRestaurant(items.id)}
             />
           );
         })} 
