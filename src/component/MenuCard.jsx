@@ -1,5 +1,5 @@
 import React from "react";
-const MenuCard = ({key, name, price, image, description,rating}) => {
+const MenuCard = ({ name, price, image, description,rating}) => {
   return (
     <div className="menu-card-container">
         <div className="menu-card">

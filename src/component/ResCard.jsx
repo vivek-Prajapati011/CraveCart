@@ -14,7 +14,7 @@ const ResCard = (props) => {
             <h2>Average Cost{props.price_for_two}</h2>
             <h3>{props.offer}</h3>
             </div>
-            <button>Menu</button>
+            <button onClick={props.onOpenMenu}>Menu</button>
         </div>
 
     )
