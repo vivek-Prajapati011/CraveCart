@@ -47,19 +47,19 @@ const Body = () => {
           ))}
       </div>
       <div className="menu-card-box">
-        {data[0].restaurants.menu.map( (item) => {
-          return (
-            <MenuCard
-              key={item.uniqueKey}
-              name={item.name}
-              rating={item.rating}
-              description={item.description}
-              image={item.image}
-              price={item.price}
-             />
-          )
-        })}
-
+        {selectedRestaurant &&
+          data[0].restaurants
+            .find((r) => r.id === selectedRestaurant)
+            .menu.map((item) => (
+              <MenuCard
+                key={item.id}
+                name={item.name}
+                rating={item.rating}
+                description={item.description}
+                image={item.image}
+                price={item.price}
+              />
+            ))}
       </div>
       <div className="footer">
         <Footer />
