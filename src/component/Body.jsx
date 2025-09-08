@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import data from "../data";
 import ResCard from "./ResCard";
 import Footer from "./Footer";
 import ReviewCard from "./ReviewCard";
 import MenuCard from "./MenuCard";
 const Body = () => {
+   const [selectedRestaurant, setSelectedRestaurant] = useState(null)
+  
   return (
     <div className="conatiner">
       <div className="resturent-card">
@@ -18,6 +20,7 @@ const Body = () => {
               location={items.location}
               image={items.image}
               price_for_two={items.price_for_two}
+              
             />
           );
         })} 
