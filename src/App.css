@@ -24,23 +24,67 @@ html, body, #root {
 
 .header {
   display: flex;
-  border: 2px solid;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
-   box-sizing: border-box;
-  
+  box-sizing: border-box;
+  padding: 12px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 .logo > img {
-  
   width: 120px;
+  height: auto;
+  display: block;
 }
 .nav-links > ul {
   display: flex;
+  align-items: center;
+  gap: 6px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links > ul > li {
-  padding: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  color: #374151; /* gray-700 */
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+}
+
+.nav-links > ul > li:hover {
+  background-color: #f3f4f6; /* gray-100 */
+  color: #111827; /* gray-900 */
+}
+
+.nav-links > ul > li:active {
+  transform: translateY(1px);
+}
+
+/* Give first item a subtle active style by default (can be replaced by real active later) */
+.nav-links > ul > li:first-child {
+  color: #111827;
+}
+
+/* Responsive header */
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px 16px;
+  }
+  .nav-links > ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
 }
 .resturent-card-container {
   width: 250px;
@@ -120,17 +164,20 @@ html, body, #root {
 .footer-container {
   background-color: #111827; /* dark background */
   color: #f3f4f6; /* light text */
-  padding: 40px 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 30px;
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-items: flex-start;
+  gap: 32px 40px;
+  border-top: 1px solid #1f2937;
 }
 
 .footer-container h2 {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 14px;
+  margin-bottom: 12px;
   color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .footer-container ul {
@@ -140,25 +187,25 @@ html, body, #root {
 }
 
 .footer-container ul li {
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 .footer-container ul li a {
   text-decoration: none;
   color: #d1d5db;
   font-size: 14px;
-  transition: color 0.3s;
+  transition: color 0.2s ease, padding-left 0.2s ease;
 }
 
 .footer-container ul li a:hover {
-  color: #60a5fa; /* blue hover effect */
+  color: #93c5fd; /* blue hover effect */
+  padding-left: 4px;
 }
 
 .social-media-logo ul {
   display: flex;
-  gap: 15px;
+  gap: 14px;
   align-items: center;
-  justify-content: center;
 }
 
 .social-media-logo ul li {
@@ -166,15 +213,55 @@ html, body, #root {
 }
 
 .social-media-logo ul li img {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   filter: brightness(0) invert(1); /* make icons white on dark bg */
-  transition: transform 0.3s, filter 0.3s;
+  transition: transform 0.2s, filter 0.2s;
 }
 
 .social-media-logo ul li img:hover {
-  transform: scale(1.2);
-  filter: brightness(0) invert(0.6) sepia(1) hue-rotate(190deg) saturate(300%);
+  transform: scale(1.08);
+  filter: brightness(0) invert(0.8);
+}
+
+/* Social icon button wrapper */
+.social-media-logo ul li a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: #0f172a; /* slate-900 */
+  border: 1px solid #1f2937; /* gray-800 */
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.social-media-logo ul li a:hover {
+  transform: translateY(-2px);
+  border-color: #374151; /* gray-700 */
+  background: #0b1220;
+}
+
+/* Responsive tweaks for footer */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 36px 20px;
+    gap: 24px;
+  }
+  .social-media-logo ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  .footer-container ul li a:hover {
+    padding-left: 0; /* avoid layout shift on small screens */
+  }
 }
 
 /* Review Section Styles */
