@@ -12,6 +12,7 @@ const ResCard = (props) => {
             </div>
             <div className="res-details">
             <h2>Average Cost{props.price_for_two}</h2>
+            <button>Book Now</button>
             <h3>{props.offer}</h3>
             </div>
             <button onClick={props.onOpenMenu}>Menu</button>
