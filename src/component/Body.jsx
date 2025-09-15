@@ -6,7 +6,7 @@ import ReviewCard from "./ReviewCard";
 import MenuCard from "./MenuCard";
 const Body = () => {
    const [selectedRestaurant, setSelectedRestaurant] = useState(null)
-  
+ 
   return (
     <div className="conatiner">
       <div className="resturent-card">
