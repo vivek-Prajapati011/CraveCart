@@ -3,7 +3,7 @@ html, body, #root {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #f8fafc;
+  background-color: transparent;
 }
 
 .conatiner {
@@ -15,8 +15,8 @@ html, body, #root {
 .resturent-card {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  padding: 20px 0;
+  gap: 24px;
+  padding: 24px 0 8px 0;
 }
 
 
@@ -28,9 +28,10 @@ html, body, #root {
   justify-content: space-between;
   width: 100%;
   box-sizing: border-box;
-  padding: 12px 20px;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 20px;
+  background: linear-gradient(180deg, rgba(20,24,38,0.7), rgba(10,11,16,0.9));
+  border-bottom: 1px solid rgba(124, 58, 237, 0.25);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -39,6 +40,7 @@ html, body, #root {
   width: 120px;
   height: auto;
   display: block;
+  filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.5));
 }
 .nav-links > ul {
   display: flex;
@@ -51,16 +53,18 @@ html, body, #root {
 
 .nav-links > ul > li {
   padding: 10px 14px;
-  border-radius: 8px;
-  color: #374151; /* gray-700 */
+  border-radius: 10px;
+  color: var(--cc-muted);
   font-weight: 600;
   cursor: pointer;
-  transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  border: 1px solid transparent;
 }
 
 .nav-links > ul > li:hover {
-  background-color: #f3f4f6; /* gray-100 */
-  color: #111827; /* gray-900 */
+  background-color: rgba(124, 58, 237, 0.08);
+  color: var(--cc-text);
+  box-shadow: 0 0 0 1px rgba(124, 58, 237, 0.25) inset, 0 2px 12px rgba(124, 58, 237, 0.25);
 }
 
 .nav-links > ul > li:active {
@@ -69,7 +73,9 @@ html, body, #root {
 
 /* Give first item a subtle active style by default (can be replaced by real active later) */
 .nav-links > ul > li:first-child {
-  color: #111827;
+  color: var(--cc-primary-2);
+  background: rgba(34, 211, 238, 0.06);
+  border-color: rgba(34, 211, 238, 0.3);
 }
 
 /* Responsive header */
@@ -88,11 +94,12 @@ html, body, #root {
 }
 .resturent-card-container {
   width: 250px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(17, 24, 39, 0.9), rgba(10, 11, 16, 0.92));
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.12), 0 1px 0 rgba(255,255,255,0.04) inset;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   cursor: pointer;
   margin: 16px;
   display: flex;
@@ -100,31 +107,33 @@ html, body, #root {
 }
 
 .resturent-card-container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-4px);
+  border-color: rgba(34, 211, 238, 0.35);
+  box-shadow: 0 18px 40px rgba(34, 211, 238, 0.18), 0 6px 16px rgba(124, 58, 237, 0.18);
 }
 
 .res-img img {
   width: 100%;
   height: 160px;
   object-fit: cover;
+  filter: saturate(1.05) contrast(1.05);
 }
 
 .res-info {
-  padding: 10px 12px;
+  padding: 12px 12px 6px 12px;
 }
 
 .res-info h2 {
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
   margin: 5px 0;
-  color: #333;
+  color: #e5e7eb;
 }
 
 .res-info h3 {
   font-size: 14px;
-  font-weight: 400;
-  color: #666;
+  font-weight: 500;
+  color: #9ca3af;
 }
 
 .res-details {
@@ -133,32 +142,34 @@ html, body, #root {
 
 .res-details h2 {
   font-size: 14px;
-  font-weight: 500;
-  color: #555;
+  font-weight: 600;
+  color: #cbd5e1;
   margin: 4px 0;
 }
 
 .res-details h3 {
   font-size: 13px;
-  font-weight: 400;
-  color: #fc8019; /* Swiggy orange for offers */
+  font-weight: 600;
+  color: var(--cc-accent);
 }
 
 .resturent-card-container button {
   margin: 0 12px 12px 12px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  background: #fc8019;
-  color: #fff;
+  padding: 10px 12px;
+  border: 1px solid rgba(124, 58, 237, 0.5);
+  border-radius: 10px;
+  background: radial-gradient(120% 120% at 80% -10%, rgba(124,58,237,0.5), transparent 50%), linear-gradient(180deg, rgba(20,24,38,0.9), rgba(10,11,16,0.95));
+  color: #e5e7eb;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .resturent-card-container button:hover {
-  background: #e46e13;
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.6);
+  box-shadow: 0 8px 24px rgba(34,211,238,0.25), 0 0 0 1px rgba(124,58,237,0.3) inset;
 }
 
 .footer-container {
